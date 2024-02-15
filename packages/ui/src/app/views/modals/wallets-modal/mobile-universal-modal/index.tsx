@@ -82,15 +82,15 @@ export const MobileUniversalModal: Component<MobileUniversalModalProps> = props 
     };
 
     const onSelectTelegram = (): void => {
-        const atWallet = props.walletsList.find(wallet => wallet.appName === AT_WALLET_APP_NAME);
-        if (!atWallet || !isWalletInfoRemote(atWallet)) {
-            throw new TonConnectUIError('@wallet bot not found in the wallets list');
-        }
+        // const atWallet = props.walletsList.find(wallet => wallet.appName === AT_WALLET_APP_NAME);
+        // if (!atWallet || !isWalletInfoRemote(atWallet)) {
+        //     throw new TonConnectUIError('@wallet bot not found in the wallets list');
+        // }
 
         const walletLink = connector.connect(
             {
-                bridgeUrl: atWallet.bridgeUrl,
-                universalLink: atWallet.universalLink
+                bridgeUrl: 'https://bridge.tonapi.io/bridge',
+                universalLink: 'https://bridge.tonapi.io/bridge'
             },
             props.additionalRequest
         );
@@ -131,7 +131,7 @@ export const MobileUniversalModal: Component<MobileUniversalModalProps> = props 
                     Connect your wallet
                 </H1Styled>
                 <H2Styled translationKey="walletModal.mobileUniversalModal.openWalletOnTelegramOrSelect">
-                    Open Wallet in Telegram or select your wallet to connect
+                    Open DeWallet in Telegram or select your wallet to connect
                 </H2Styled>
                 <TelegramButtonStyled
                     leftIcon={<AtWalletIcon />}
@@ -140,7 +140,7 @@ export const MobileUniversalModal: Component<MobileUniversalModalProps> = props 
                     scale="s"
                 >
                     <Translation translationKey="walletModal.mobileUniversalModal.openWalletOnTelegram">
-                        Open Wallet in Telegram
+                        Open DeWallet in Telegram
                     </Translation>
                 </TelegramButtonStyled>
                 <UlStyled>

@@ -115,7 +115,7 @@ export const TelegramButtonStyled = styled(Button)`
     width: calc(100% - 48px);
     border-radius: ${props => borders[props.theme!.borderRadius]};
     padding: 14px 16px 14px 14px;
-    background-color: ${props => props.theme!.colors.telegramButton};
+    background-color: #007AFF;
 
     color: ${props => props.theme!.colors.constant.white};
     font-weight: 590;
